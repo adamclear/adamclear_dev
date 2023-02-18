@@ -2,13 +2,13 @@ import { css, StyleSheet } from 'aphrodite';
 import React from 'react';
 
 const styles = StyleSheet.create({
-	Project2: {
+	Portfolio: {
 		display: 'block'
 	}
 });
 
-export function Project2() {
+export function Portfolio() {
 	return (
-		<div>Project2</div>
+		<div className={css(styles.Portfolio)}>Portfolio</div>
 	)
 }

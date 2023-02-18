@@ -5,27 +5,38 @@ import * as headerActions from '../actions/headerActionCreator';
 
 const styles = StyleSheet.create({
 	header: {
-		display: 'block'
+		display: 'flex',
 	},
 	navBar: {
-		display: 'inline'
+		display: 'flex',
+		width: '100%'
+	},
+	navBarItem: {
+		marginRight: '10px'
 	}
 });
 
-export function Header() {
-	return (
-		<React.Fragment>
-			<div className={css(styles.header)}>
-				<nav className={css(styles.navBar)}>
-					<ul>
-						<li onClick={headerActions.changeContent('about')}>About</li>
-						<li>Portfolio</li>
-						<li onClick={headerActions.changeContent('about')}>Resume</li>
-					</ul>
-				</nav>
-			</div>
-		</React.Fragment>
-	)
+class Header extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	render () {
+	const { changeContent } = this.props
+		return (
+			<React.Fragment>
+				<div className={css(styles.header)}>
+					<nav className={css(styles.navBar)}>
+							<div className={css(styles.navBarItem)}
+									 onClick={() => changeContent('about')}>About</div>
+							<div className={css(styles.navBarItem)}
+									 onClick={() => changeContent('portfolio')}>Portfolio</div>
+							<div className={css(styles.navBarItem)}
+									 onClick={() => changeContent('resume')}>Resume</div>
+					</nav>
+				</div>
+			</React.Fragment>
+		)
+	}
 };
 
 export const mapStateToProps = (state) => {
@@ -34,4 +45,10 @@ export const mapStateToProps = (state) => {
 	};
 };
 
-export const ReduxHeader = connect(mapStateToProps)(Header);
+export function mapDispatchToProps(dispatch) {
+  return {
+    changeContent: (content) => dispatch(headerActions.changeContent(content))
+  }
+}
+
+export const ReduxHeader = connect(mapStateToProps, mapDispatchToProps)(Header);

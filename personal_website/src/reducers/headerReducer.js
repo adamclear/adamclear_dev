@@ -8,8 +8,10 @@ export const initialState = Map({
 export function headerReducer(state = initialState, action) {
 	switch (action.type) {
 		case CHANGE_CONTENT:
-			console.log(state)
-			return state.set('current_content', action.current_content);
+			state = state.toJS()
+			state.current_content = action.current_content
+			state = Map(state)
+			return state;
 		default:
 			return state;
 	};

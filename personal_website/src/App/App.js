@@ -2,7 +2,6 @@ import AppContext from './AppContext';
 import { css, StyleSheet } from 'aphrodite';
 import { ReduxBody } from '../Body/Body';
 import { ReduxHeader } from '../Header/Header';
-import { changeContent } from '../actions/headerActionCreator';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -21,11 +20,10 @@ class App extends React.Component {
     }
   }
   render () {
-    const { changeContent } = this.props;
     return (
       <AppContext.Provider value={this.state}>
         <div className={css(styles.App)}>
-          <ReduxHeader changeContent={changeContent}/>
+          <ReduxHeader />
           <ReduxBody />
         </div>
       </AppContext.Provider>
@@ -43,14 +41,8 @@ App.defaultProps = {
 
 export const mapStateToProps = (state) => {
   return {
-    current_content: state.current_content
+    current_content: state.header.get('current_content')
   };
 };
-
-// export function mapDispatchToProps(dispatch) {
-//   return {
-//     changeContent: (content) => dispatch(changeContent(content))
-//   }
-// }
 
 export const ReduxApp = connect(mapStateToProps)(App);
