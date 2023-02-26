@@ -5,25 +5,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Resume } from './Resume/Resume';
 
-
-const fadeIn = {
-	'0%': { opacity: 0 },
-	'100%': { opacity: 1 }
-}
-
-// const styles = StyleSheet.create({
-// 	Portfolio: {
-// 		display: 'block',
-// 		animation: {
-// 			animationDuration: '5s',
-// 			animationName: [fadeIn]
-// 		}
-// 	}
-// });
-
 const styles = StyleSheet.create({
 	body: {
-		display: 'block'
+		height: '100%',
+		width: '100%',
+		marginTop: '-55px'
 	}
 });
 

@@ -3,12 +3,13 @@ import React from 'react';
 
 const styles = StyleSheet.create({
 	Resume: {
-		display: 'block'
+		display: 'block',
+		color: 'white'
 	}
 });
 
 export function Resume() {
 	return (
-		<div>Resume</div>
+		<div className={css(styles.Resume)}>Resume</div>
 	)
 }

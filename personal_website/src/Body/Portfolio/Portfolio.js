@@ -3,7 +3,8 @@ import React from 'react';
 
 const styles = StyleSheet.create({
 	Portfolio: {
-		display: 'block'
+		display: 'block',
+		color: 'white'
 	}
 });
 

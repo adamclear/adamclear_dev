@@ -6,13 +6,26 @@ import * as headerActions from '../actions/headerActionCreator';
 const styles = StyleSheet.create({
 	header: {
 		display: 'flex',
+		color: 'white',
+		position: 'fixed',
+		top: '0',
+		zIndex: '999',
+		width: '100%',
+		background: `linear-gradient(to right, rgba(0,0,0,.5) 10%, rgba(255,255,255,0) 99%)`,
 	},
 	navBar: {
 		display: 'flex',
 		width: '100%'
 	},
 	navBarItem: {
-		marginRight: '10px'
+		margin: '10px 15px',
+		cursor: 'pointer',
+	},
+	separator: {
+		height: '15px',
+		width: '1px',
+		backgroundColor: 'white',
+		alignSelf: 'center'
 	}
 });
 
@@ -21,17 +34,19 @@ class Header extends React.Component {
 		super(props);
 	}
 	render () {
-	const { changeContent } = this.props
+	const { changeContent, current_content } = this.props;
 		return (
 			<React.Fragment>
 				<div className={css(styles.header)}>
 					<nav className={css(styles.navBar)}>
 							<div className={css(styles.navBarItem)}
-									 onClick={() => changeContent('about')}>About</div>
+									onClick={() => changeContent('about')}>About Me</div>
+							<div className={css(styles.separator)}></div>
 							<div className={css(styles.navBarItem)}
-									 onClick={() => changeContent('portfolio')}>Portfolio</div>
+									onClick={() => changeContent('portfolio')}>Portfolio</div>
+							<div className={css(styles.separator)}></div>
 							<div className={css(styles.navBarItem)}
-									 onClick={() => changeContent('resume')}>Resume</div>
+									onClick={() => changeContent('resume')}>Resume</div>
 					</nav>
 				</div>
 			</React.Fragment>
@@ -41,7 +56,7 @@ class Header extends React.Component {
 
 export const mapStateToProps = (state) => {
 	return {
-		current_content: state.current_content
+		current_content: state.header.get('current_content')
 	};
 };
 
