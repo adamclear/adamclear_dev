@@ -41,6 +41,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
     "immutable": "^4.2.4",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",

@@ -1,6 +1,6 @@
 import { css, StyleSheet } from 'aphrodite';
 import React from 'react';
-import bgimage from '../../assets/about_me_vertical.jpg';
+import bgimage from '../../assets/about_me.jpg';
 
 const styles = StyleSheet.create({
 	About: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 		// margin: '15px',
 		height: '1500px',
 		maxWidth: '1000px',
-		backgroundImage: `linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0)), url(${bgimage})`,
+		backgroundImage: `linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0) 30%), url(${bgimage})`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		flex: '1',
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 		zIndex: '3',
 		maxWidth: '60em',
 		backgroundColor: 'rgba(0,0,0,.5)',
-		margin: '15em 2em 0em 27em',
+		margin: '22em 10% 0 5em',
 		overflowWrap: 'break-word',
 		hyphens: 'auto',
 		padding: '1em',
