@@ -19,6 +19,10 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.pdf$/i,
+				type: 'asset/source'
+			},
+			{
 				test: /\.css$/,
 				use: [
 					'style-loader',

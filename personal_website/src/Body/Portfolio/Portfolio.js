@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 	},
 	separator: {
 		height: '1px',
-		width: '50%',
+		width: '10em',
 		backgroundColor: 'white',
 		alignSelf: 'center'
 	}
