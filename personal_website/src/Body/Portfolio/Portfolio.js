@@ -11,8 +11,10 @@ const styles = StyleSheet.create({
 	projectBlock: {
 		height: '25em',
 		width: '75%',
+		maxWidth: '20em',
 		backgroundColor: 'white',
-		margin: '5em 5em'
+		margin: '5em',
+		alignSelf: 'center'
 	},
 	headerSpacer: {
 		height: '1px',
