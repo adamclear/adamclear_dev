@@ -16,7 +16,7 @@
     "start": "webpack-dev-server --mode development --config webpack.config.js --hot",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "webpack --mode production --config webpack.config.js --hot"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "eslintConfig": {
     "extends": [

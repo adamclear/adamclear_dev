@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		flexDirection: 'column'
 	},
+	projectContainer: {
+		display: 'flex',
+		flexDirection: 'column'
+	},
 	projectBlock: {
 		height: '25em',
 		width: '75%',
@@ -19,6 +23,12 @@ const styles = StyleSheet.create({
 	headerSpacer: {
 		height: '1px',
 		marginBottom: '5em'
+	},
+	separator: {
+		height: '1px',
+		width: '50%',
+		backgroundColor: 'white',
+		alignSelf: 'center'
 	}
 });
 
@@ -26,9 +36,13 @@ export function Portfolio() {
 	return (
 		<div className={css(styles.Portfolio)}>
 			<div className={css(styles.headerSpacer)}></div>
-			<div className={css(styles.projectBlock)}></div>
-			<div className={css(styles.projectBlock)}></div>
-			<div className={css(styles.projectBlock)}></div>
+			<div className={css(styles.projectContainer)}>
+				<div className={css(styles.projectBlock)}></div>
+				<div className={css(styles.separator)}></div>
+				<div className={css(styles.projectBlock)}></div>
+				<div className={css(styles.separator)}></div>
+				<div className={css(styles.projectBlock)}></div>
+			</div>
 		</div>
 	)
 }
