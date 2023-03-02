@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
 	},
 	downloadPDF: {
 		width: '10rem',
-		textAlign: 'center'
+		textAlign: 'center',
+		cursor: 'pointer'
 	}
 });
 

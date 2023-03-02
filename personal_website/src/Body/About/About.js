@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
 		color: 'white',
 	},
 	image: {
-		// margin: '15px',
 		height: '1500px',
 		maxWidth: '1000px',
 		backgroundImage: `linear-gradient(to left, rgba(0,0,0,1), rgba(255,255,255,0) 30%), url(${bgimage})`,
@@ -26,7 +25,8 @@ const styles = StyleSheet.create({
 		overflowWrap: 'break-word',
 		hyphens: 'auto',
 		padding: '1em',
-		background: `linear-gradient(to right, rgba(0,0,0,.5) 10%, rgba(255,255,255,0) 99%)`,
+		// background: `linear-gradient(to right, rgba(0,0,0,.5) 10%, rgba(255,255,255,0) 99%)`,
+		boxShadow: '0 0 1em 1em rgba(0,0,0,.5)'
 	}
 });
 
@@ -35,7 +35,21 @@ export function About() {
 		<div className={css(styles.About)}>
 			<div className={css(styles.image)} />
 			<div className={css(styles.textbox)}>
-				<div>I am a graduate of Holberton School Tulsa's Full-Stack Web Development program where I developed my foundations in multiple programming languages and tools. I am a creative, out of the box thinker with strong skills in team based communication and a passion for creating new things.</div>
+				<p>
+				I am a graduate of Holberton School Tulsa's Full-Stack Web Development program where I developed my foundations in multiple programming languages and tools. I am a creative, out of the box thinker with strong skills in team based communication.
+				<br/>
+				<br/>
+				I love making things and solving things.
+				<br/>
+				<br/>
+				I enjoy painting, drawing, sculpting, cooking, writing, coding, etc. Anything that allows me to express myself creatively and solve problems along the way.
+				<br/>
+				<br/>
+				I feel that creative expression is necessary to a fulfilling existence and that everyone should have an outlet for creativity, regardless of whether they feel they are "talented" or "creative" people. Talent and creativity are cultivated through practice and curiosity. I believe that anyone that is free from the tribulations of meeting their basic needs will find some way to express themselves, and that the world is better when people are allowed to focus on this expression.
+				<br/>
+				<br/>
+				I've spent time at Tulsa Community College where I studied studio arts and general world history. I eventually graduated with two Associate's Degrees, one in each of those subjects. I later went on to Oklahoma State University where I continued pursuit of both subjects and I was able to join a class where we travelled to Italy where I painted, drew, and museum'd my way through Florence, Pisa, Sienna, and Rome.
+				</p>
 			</div>
 		</div>
 	)
