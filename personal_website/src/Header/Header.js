@@ -2,6 +2,8 @@ import { css, StyleSheet } from 'aphrodite';
 import React from 'react';
 import { connect } from 'react-redux';
 import * as headerActions from '../actions/headerActionCreator';
+import githubLogo from '../assets/github.png';
+import linkedinLogo from '../assets/linkedin.png';
 
 const styles = StyleSheet.create({
 	header: {
@@ -23,11 +25,36 @@ const styles = StyleSheet.create({
 		margin: '10px 15px',
 		cursor: 'pointer',
 	},
+	icons: {
+		display: 'flex',
+		alignItems: 'center',
+		position: 'fixed',
+		right: '0',
+		height: '39px'
+	},
 	separator: {
 		height: '15px',
 		width: '1px',
 		backgroundColor: 'white',
 		alignSelf: 'center'
+	},
+	github: {
+		// backgroundImage: `url${githubLogo}`,
+		// backgroundRepeat: 'no-repeat',
+		// backgroundSize: 'contain',
+		width: '20px',
+		height: '20px',
+		margin: '10px 5px',
+		cursor: 'pointer'
+	},
+	linkedin: {
+		// backgroundImage: `url${githubLogo}`,
+		// backgroundRepeat: 'no-repeat',
+		// backgroundSize: 'contain',
+		width: '20px',
+		height: '20px',
+		margin: '10px 5px',
+		cursor: 'pointer'
 	}
 });
 
@@ -50,6 +77,18 @@ class Header extends React.Component {
 							<div className={css(styles.navBarItem)}
 									onClick={() => changeContent('resume')}>Resume</div>
 					</nav>
+					<div className={css(styles.icons)}>
+						<a href="https://github.com/adamclear"
+									target="_blank">
+							<img className={css(styles.github)}
+									src={githubLogo}></img>
+						</a>
+						<a href="https://www.linkedin.com/in/adam-clear/"
+									target="_blank">
+							<img className={css(styles.linkedin)}
+									src={linkedinLogo}></img>
+						</a>
+						</div>
 				</div>
 			</React.Fragment>
 		)

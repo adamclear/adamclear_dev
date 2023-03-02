@@ -1,7 +1,6 @@
 import { css, StyleSheet } from 'aphrodite';
 import React from 'react';
 import resume from '../../assets/Resume.jpg';
-import resumeSmall from '../../assets/ResumeSmall.jpg'
 
 const styles = StyleSheet.create({
 	Resume: {
@@ -15,17 +14,24 @@ const styles = StyleSheet.create({
 		marginBottom: '5em'
 	},
 	resume: {
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'contain',
-		backgroundImage: `url(${resumeSmall})`,
+		// backgroundRepeat: 'no-repeat',
+		// backgroundSize: 'contain',
+		// backgroundImage: `url(${resume})`,
 		margin: '5rem 0',
-		height: '32.45em',
-		width: '25.1em',
+		// height: '32.45em',
+		// width: '25.1em',
+		height: '515px',
+		width: '400px',
+		cursor: 'pointer',
+		'@media (min-width: 700px)': {
+			height: '841px',
+			width: '650px'
+		}
 	},
 	downloadPDF: {
-		width: '10rem',
-		textAlign: 'center',
-		cursor: 'pointer'
+		// margin: '5rem 0',
+		// height: '515px',
+		// width: '400px',
 	}
 });
 
@@ -44,9 +50,11 @@ export function Resume() {
 	return (
 		<div className={css(styles.Resume)}>
 			<div className={css(styles.headerSpacer)}></div>
-			<img className={css(styles.resume)}></img>
 			<div className={css(styles.downloadPDF)}
-							onClick={downloadPDF}>Download PDF</div>
+							onClick={downloadPDF}>
+				<img className={css(styles.resume)}
+						 src={resume}></img>
+			</div>
 		</div>
 	)
 }

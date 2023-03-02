@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
 	},
 	headerSpacer: {
 		height: '1px',
-		marginBottom: '5em'
+		marginBottom: '10em'
 	},
 	separator: {
 		height: '1px',
 		width: '10em',
 		backgroundColor: 'white',
 		alignSelf: 'center',
-		marginBottom: '3em',
+		margin: '3em 0',
 		'@media (min-width: 1500px)': {
 			width: '1px',
 			height: '10em',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 		objectFit: 'cover'
 	},
 	projectDescription: {
-		width: '10em',
+		width: '15em',
 		marginBottom: '2em',
 		marginTop: '-5em',
 		overflowWrap: 'break-word',
@@ -81,8 +81,19 @@ const styles = StyleSheet.create({
 		},
 	},
 	projectTitle: {
-		margin: '2em 0',
-		fontFamily: 'Sans-Serif'
+		fontFamily: 'Sans-Serif',
+		fontSize: '30px',
+		marginBottom: '20px'
+	},
+	projectTech: {
+		width: '15em',
+		marginBottom: '2em',
+		marginTop: '-2em',
+		overflowWrap: 'break-word',
+		hyphens: 'auto',
+		padding: '1em',
+		textAlign: 'left',
+		fontFamily: 'monospace'
 	}
 });
 
@@ -95,57 +106,63 @@ export function Portfolio() {
 					<h3 className={css(styles.projectTitle)}>
 						HolB&D Character Creator
 					</h3>
-					<div className={css(styles.projectImage)}>
-						<img src={DnDCC} className={css(styles.image)} />
-					</div>
-					<div className={css(styles.projectDescription)}>
-						This is some sample text about the project. Lorem ipsum
-						solor blahmet. This is some sample text about the project. 
-						Lorem ipsum solor blahmet.
-					</div>
 					<a className={css(styles.gitLink)}
 							 href="https://github.com/adamclear/DnD_CC"
 							 target="_blank">
-							View on Github
+						<div className={css(styles.projectImage)}>
+						<img src={DnDCC} className={css(styles.image)} />
+					</div>
 					</a>
+					<div className={css(styles.projectDescription)}>
+						A Dungeons & Dragons 5th Edition character creator. Allows a user to 
+						build and level a character. A third-party API is leveraged to produce 
+						a character sheet. Users can create an account & save/access characters.
+					</div>
+					<div className={css(styles.projectTech)}>
+						Tech: Bcrypt, Flask, Jinja, Python, SQLAlchemy, SQLite
+					</div>
 				</div>
 				<div className={css(styles.separator)}></div>
 				<div className={css(styles.projectContainer)}>
 					<h3 className={css(styles.projectTitle)}>
 						The Joy of Painting API
 					</h3>
-					<div className={css(styles.projectImage)}>
-						<img src={JoP} className={css(styles.image)} />
-					</div>
-					<div className={css(styles.projectDescription)}>
-						This is some sample text about the project. Lorem ipsum
-						solor blahmet. This is some sample text about the project. 
-						Lorem ipsum solor blahmet.
-					</div>
 					<a className={css(styles.gitLink)}
 							 href="https://github.com/adamclear/holbertonschool-the-joy-of-painting-api"
 							 target="_blank">
-							View on Github
+						<div className={css(styles.projectImage)}>
+							<img src={JoP} className={css(styles.image)} />
+						</div>
 					</a>
+					<div className={css(styles.projectDescription)}>
+						A single page application that utilizes backend TSV & CSV files to 
+						generate a database and API to fetch and serve Bob Ross episodes 
+						based on API query criteria.
+					</div>
+					<div className={css(styles.projectTech)}>
+						Tech: Bcrypt, Flask, Jinja, Pandas, Python, SQLAlchemy, SQLite
+					</div>
 				</div>
 				<div className={css(styles.separator)}></div>
 				<div className={css(styles.projectContainer)}>
 					<h3 className={css(styles.projectTitle)}>
 						AirBnB Clone
 					</h3>
-					<div className={css(styles.projectImage)}>
-						<img src={AirBnB} className={css(styles.image)} />
-					</div>
-					<div className={css(styles.projectDescription)}>
-						This is some sample text about the project. Lorem ipsum
-						solor blahmet. This is some sample text about the project. 
-						Lorem ipsum solor blahmet.
-					</div>
 					<a className={css(styles.gitLink)}
 							 href="https://github.com/adamclear/AirBnB_clone_v4"
 							 target="_blank">
-							View on Github
+						<div className={css(styles.projectImage)}>
+							<img src={AirBnB} className={css(styles.image)} />
+						</div>
 					</a>
+					<div className={css(styles.projectDescription)}>
+						A basic clone of the AirBnB interface front-end and a back-end with 
+						a custom console, database, & framework. Completed over the course 
+						of several projects where new codebases were forked and worked from.
+					</div>
+					<div className={css(styles.projectTech)}>
+						Tech: Flask, Jinja, MySQL, Python, SQLAlchemy
+					</div>
 				</div>
 			</div>
 		</div>
