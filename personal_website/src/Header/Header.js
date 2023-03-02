@@ -15,7 +15,9 @@ const styles = StyleSheet.create({
 	},
 	navBar: {
 		display: 'flex',
-		width: '100%'
+		width: '100%',
+		fontFamily: 'monospace',
+		fontSize: '16px'
 	},
 	navBarItem: {
 		margin: '10px 15px',
