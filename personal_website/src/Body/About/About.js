@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
 		overflowWrap: 'break-word',
 		hyphens: 'auto',
 		padding: '1em',
-		// background: `linear-gradient(to right, rgba(0,0,0,.5) 10%, rgba(255,255,255,0) 99%)`,
 		boxShadow: '0 0 1em 1em rgba(0,0,0,.5)'
 	}
 });
