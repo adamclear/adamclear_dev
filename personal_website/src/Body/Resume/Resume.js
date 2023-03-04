@@ -14,12 +14,7 @@ const styles = StyleSheet.create({
 		marginBottom: '5em'
 	},
 	resume: {
-		// backgroundRepeat: 'no-repeat',
-		// backgroundSize: 'contain',
-		// backgroundImage: `url(${resume})`,
 		margin: '5rem 0',
-		// height: '32.45em',
-		// width: '25.1em',
 		height: '515px',
 		width: '400px',
 		cursor: 'pointer',
@@ -27,11 +22,6 @@ const styles = StyleSheet.create({
 			height: '841px',
 			width: '650px'
 		}
-	},
-	downloadPDF: {
-		// margin: '5rem 0',
-		// height: '515px',
-		// width: '400px',
 	}
 });
 
@@ -50,11 +40,9 @@ export function Resume() {
 	return (
 		<div className={css(styles.Resume)}>
 			<div className={css(styles.headerSpacer)}></div>
-			<div className={css(styles.downloadPDF)}
-							onClick={downloadPDF}>
-				<img className={css(styles.resume)}
-						 src={resume}></img>
-			</div>
+			<img className={css(styles.resume)}
+						src={resume}
+						onClick={downloadPDF}></img>
 		</div>
 	)
 }
