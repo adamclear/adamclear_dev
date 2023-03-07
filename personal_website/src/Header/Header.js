@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as headerActions from '../actions/headerActionCreator';
 import githubLogo from '../assets/github.png';
 import linkedinLogo from '../assets/linkedin.png';
+import emailLogo from '../assets/email.png';
 
 const styles = StyleSheet.create({
 	header: {
@@ -39,18 +40,18 @@ const styles = StyleSheet.create({
 		alignSelf: 'center'
 	},
 	github: {
-		// backgroundImage: `url${githubLogo}`,
-		// backgroundRepeat: 'no-repeat',
-		// backgroundSize: 'contain',
 		width: '20px',
 		height: '20px',
 		margin: '10px 5px',
 		cursor: 'pointer'
 	},
 	linkedin: {
-		// backgroundImage: `url${githubLogo}`,
-		// backgroundRepeat: 'no-repeat',
-		// backgroundSize: 'contain',
+		width: '20px',
+		height: '20px',
+		margin: '10px 5px',
+		cursor: 'pointer'
+	},
+	email: {
 		width: '20px',
 		height: '20px',
 		margin: '10px 5px',
@@ -88,7 +89,11 @@ class Header extends React.Component {
 							<img className={css(styles.linkedin)}
 									src={linkedinLogo}></img>
 						</a>
-						</div>
+						<a href="mailto:adam.clear.0@gmail.com">
+							<img className={css(styles.email)}
+									src={emailLogo}></img>
+						</a>
+					</div>
 				</div>
 			</React.Fragment>
 		)
