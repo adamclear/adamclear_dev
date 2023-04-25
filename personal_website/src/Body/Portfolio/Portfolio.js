@@ -1,7 +1,7 @@
 import { css, StyleSheet } from 'aphrodite';
 import React from 'react';
 import DnDCC from '../../assets/DnDCC.jpg';
-import AirBnB from '../../assets/AirBnB.jpg';
+import LetsEat from '../../assets/LetsEat.jpg';
 import JoP from '../../assets/JoP.jpg';
 
 const styles = StyleSheet.create({
@@ -104,6 +104,28 @@ export function Portfolio() {
 			<div className={css(styles.projectSection)}>
 				<div className={css(styles.projectContainer)}>
 					<h3 className={css(styles.projectTitle)}>
+						Let's Eat!
+					</h3>
+					<a className={css(styles.gitLink)}
+							 href="https://github.com/adamclear/lets_eat"
+							 target="_blank">
+						<div className={css(styles.projectImage)}>
+						<img src={LetsEat} className={css(styles.image)} />
+					</div>
+					</a>
+					<div className={css(styles.projectDescription)}>
+						An Android and web based application that allows users to create 
+						an account, find friends, and create a group. The app then uses 
+						each user's preferences to find a restaurant for the group to go 
+						eat at.
+					</div>
+					<div className={css(styles.projectTech)}>
+						Tech: Dart, Firebase, Flutter, Yelp Fusion API
+					</div>
+				</div>
+				<div className={css(styles.separator)}></div>
+				<div className={css(styles.projectContainer)}>
+					<h3 className={css(styles.projectTitle)}>
 						HolB&D Character Creator
 					</h3>
 					<a className={css(styles.gitLink)}
@@ -144,26 +166,6 @@ export function Portfolio() {
 					</div>
 				</div>
 				<div className={css(styles.separator)}></div>
-				<div className={css(styles.projectContainer)}>
-					<h3 className={css(styles.projectTitle)}>
-						AirBnB Clone
-					</h3>
-					<a className={css(styles.gitLink)}
-							 href="https://github.com/adamclear/AirBnB_clone_v4"
-							 target="_blank">
-						<div className={css(styles.projectImage)}>
-							<img src={AirBnB} className={css(styles.image)} />
-						</div>
-					</a>
-					<div className={css(styles.projectDescription)}>
-						A basic clone of the AirBnB interface front-end and a back-end with 
-						a custom console, database, & framework. Completed over the course 
-						of several projects where new codebases were forked and worked from.
-					</div>
-					<div className={css(styles.projectTech)}>
-						Tech: Flask, Jinja, MySQL, Python, SQLAlchemy
-					</div>
-				</div>
 			</div>
 		</div>
 	)
